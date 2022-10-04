@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, AppBar, Typography, Grow, Grid } from '@mui/material';
+import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
 
 // import React from 'react';
 
@@ -8,10 +8,10 @@ import Form from './components/Form/Form';
 import { getPosts } from './actions/posts';
 import { useDispatch } from 'react-redux';
 
-// import useStyles from './styles';
+import useStyles from './styles';
 
 const App = () => {
-// const classes = useStyles();
+const classes = useStyles();
 const dispatch = useDispatch();
 
 
@@ -21,8 +21,8 @@ useEffect(() => {
 
     return (
         <Container maxWidth="lg">
-        <AppBar position="static" color="inherit">
-          <Typography variant="h2" align="center">investFeed 2</Typography>
+        <AppBar className={classes.appBar} position="static" color="inherit">
+          <Typography className={classes.heading} variant="h2" align="center">investFeed 2</Typography>
         </AppBar>
         <Grow in>
         <Container>
