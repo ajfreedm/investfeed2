@@ -18,6 +18,11 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
+app.get('/', (req,res) => {
+  res.send('Hello to investFeed2 API');
+
+})
+
 // const CONNECTION_URL = 'mongodb+srv://ajfreedm:mann2015*!@cluster0.rn83up6.mongodb.net/?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 5000;
 
